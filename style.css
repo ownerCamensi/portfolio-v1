@@ -1,0 +1,521 @@
+* {
+  padding: 0; 
+  margin: 0;
+  box-sizing: border-box; 
+}
+:root {
+--text-color: #3A3B48; 
+--text-variant: #FFFFFF;
+--primary-color: #2E2F35; 
+--secondary-color: #6875FF; 
+--border: 1px solid #ddd;
+--tail-color: #29363EBD;
+--semi-dark: #3F405252;
+}
+.dark-mode {
+background: #2E2F35 ;
+--text-color: #FFFFFF;
+--semi-dark: #E1E2E4A6;
+--semi-light: #EAEAEA;
+--text-variant: #2E2F35;
+--primary-color: #2E2F35; 
+--tail-color: #29363E;
+}
+@font-face {
+  font-family: "Material";
+  src: url('MaterialIconsTwoTone-Regular.otf') format('woff2');
+  font-weight: 400; 
+}
+.Material{
+font-family: "Material";
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+display: inline-block;
+line-height: 1;
+letter-spacing: normal;
+text-transform: none;
+white-space: nowrap;
+direction: ltr;
+}
+
+.Material {
+  font-family: "Material";
+  font-style: normal;
+font-weight: normal;
+font-size: 24px;
+display: inline-block;
+line-height: 1;
+letter-spacing: normal;
+text-transform: none;
+white-space: nowrap;
+direction: ltr;
+}
+header {
+display: flex; 
+justify-content: space-between; 
+align-items: center; 
+padding: 14px;
+border-bottom: 1px solid #ccc;
+width: 100%;
+}
+header nav {
+display: flex; 
+align-items: center; 
+justify-content: center; 
+width: 100%;
+}
+header nav ul {
+list-style: none; 
+gap: 1.6rem; 
+padding: 20px; 
+display: flex; 
+align-items: center;
+}
+header nav ul li {
+font-size: 1.1rem;
+text-transform: capitalize;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header nav ul li a {
+text-decoration: none; 
+color: var(--text-color) ;
+transition: 0.5s ease; 
+cursor: pointer; 
+}
+header nav ul li a:hover {
+  background: var(--secondary-color);
+  transform: scaleX(10deg);
+  scale: 1; 
+  border-radius: 10px;
+  color: var(--text-variant);
+  padding: 10px;
+}
+header .menu {
+position: absolute; 
+left: 0; 
+padding: 10px; 
+background: var(--text-variant);
+border: var(--border);
+cursor: pointer; 
+border-radius: 10px; 
+margin: 10px;
+transition: 0.5s;
+display: none;
+}
+header .menu button {
+border: none; 
+outline: none; 
+background: none; 
+cursor: pointer;
+font-size: 1.2rem;
+color: var(--text-color);
+}
+header .menu button .Material{
+font-size: 2rem;
+}
+
+
+header .theme-switch {
+display: flex; 
+align-items: center; 
+gap: 1rem; 
+}
+header .theme-switch button:last-child {
+display: none;
+}
+
+.dark-mode header .theme-switch button:first-child {
+display:  none; 
+}
+.dark-mode header .theme-switch button:last-child {
+  display: block;
+}
+
+header .theme-switch button {
+padding: 12px; 
+border: none; 
+cursor: pointer;  
+background: var(--text-variant);
+border: var(--border);
+border-radius: 50%; 
+height: 40px; 
+width: 40px;
+}
+
+.container {
+display: flex; 
+justify-content: center; 
+align-items: center;
+padding: 20px 0px 20px;
+margin-top: 2rem;
+flex-direction:  column;
+gap: 7rem; 
+}
+.hero {
+display: flex; 
+justify-content: center; 
+align-items: center; 
+text-align: center; 
+flex-direction: column;
+padding: 20px 0px 20px;
+}
+.hero h1 {
+font-size: 4rem;
+background: linear-gradient(to right, var(--secondary-color), #9DF37B);
+background-clip: text; 
+-webkit-background-clip: text; 
+-webkit-text-fill-color: transparent;
+}
+.hero p {
+margin-top: 2rem;
+font-size: 1.7rem;
+font-weight: 500;
+color: var(--tail-color);
+}
+.some  {
+border: 1px solid #ccc; 
+padding: 20px ;
+height: 220px ;
+width: 500px ;
+border-radius: 10px; 
+}
+.some .div-card {
+gap: 2rem; 
+padding: 20px;
+}
+.some .div-card .texts p {
+color: var(--tail-color);
+font-weight: 500;
+}
+.some .div-card .button {
+width: 70%; 
+margin-top: 15px; 
+}
+.some .div-card .button button{
+padding: 15px; 
+border: none; 
+outline: none; 
+cursor: pointer; 
+transition: 0.5s ease; 
+background: var(--secondary-color);
+border-radius: 5px; 
+color: var(--text-variant);
+}
+.dark-mode .some .div-card .texts p {
+color: var(--text-color);
+}
+.dark-mode .some .div-card .button button {
+color: var(--text-color);
+}
+.dark-mode .hero p {
+color: var(--semi-dark);
+}
+.tutorial {
+padding: 20px;
+gap: 1rem;
+}
+.tutorial .header h1{
+font-size: 3rem;
+padding: 10px;
+color: var(--primary-color);
+}
+.tutorial .sub-title p {
+color: var(--secondary-color) !important; 
+font-size: 1.6rem;
+}
+
+.siblings {
+border: var(--border);
+padding: 30px; 
+width: 400px; 
+min-height: 220px; 
+border-radius: 10px; 
+transition: 0.5s ease;
+margin-top: 50px;
+gap: 20px;
+}
+.siblings:hover {
+box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+}
+.siblings:active {
+  
+  background: var(--text-variant);
+}
+
+.siblings .message p {
+font-size: 1rem; 
+color: var(--tail-color);
+font-weight: 400;
+}
+.siblings .button {
+padding: 10px 0px 10px;
+}
+.siblings .button button {
+padding: 13px; 
+font-size: 16px; 
+border: none; 
+outline: none; 
+cursor: pointer;
+width: 40%;
+background: var(--secondary-color);
+color: var(--text-variant);
+border-radius: 10px;
+}
+
+.dark-mode .siblings .message p {
+color: var(--semi-dark)
+}
+.dark-mode .siblings {
+border: 1px solid var(--semi-dark);
+}
+.dark-mode .siblings .button button {
+color: var(--semi-light);
+}
+.dark-mode .tutorial .header h1 {
+color: var(--semi-light);
+} 
+#about {
+display: flex; 
+justify-content: center; 
+align-items: center; 
+flex-direction: column; 
+text-align: center; padding: 10px;
+}
+#about .header h1 {
+text-align: center; 
+font-size: 3rem; 
+color: var(--tail-color);
+}
+.dark-mode #about .header h1{
+color: var(--semi-light);
+}
+.dark-mode #about .message p {
+color: var(--semi-dark);
+}
+
+
+#about .message p {
+font-size: 1rem; 
+color: var(--primary-color);
+gap: 20px; 
+}
+
+.dark-mode header.active {
+background: none;
+}
+header nav ul li:first-child {
+left: 10px;
+position: absolute;
+}
+
+@media (max-width: 800px){
+header .name {
+display: none;
+}
+header nav {
+display: none;
+}
+header.active nav {
+display: flex ;
+align-items: center; 
+justify-content: center; 
+flex-direction: column; 
+gap: 1.2rem; 
+}
+header .menu {
+display: block;
+}
+header.active nav ul{
+  font-size: 1rem; 
+  flex-direction: column; 
+  gap: 1rem; 
+  position: absolute;
+  margin-top: 10rem;
+}
+header.active  {
+  background: #EAEAEA;
+  backdrop-filter: blur(20px);
+  height: 500px; 
+}
+header.active .menu {
+position: absolute!important;
+top: 0; 
+}
+header.active .theme-switch {
+position: absolute!important; 
+top: 10px;
+}
+
+header {
+border-bottom: none;
+padding: 13px;
+height: 60px;
+}
+header .menu  {
+padding: 6px; 
+border: none;
+}
+header .theme-switch {
+display: block;
+position: absolute;
+right: 0;
+}
+
+.hero h1 {
+font-size: 2rem;
+}
+.hero p {
+  font-size: 14px;
+}
+.container {
+flex-direction: column; 
+gap: 1rem; 
+}
+
+.some {
+border: 1px solid #ccc;
+padding: 10px;
+height: 200px;
+width: 200px;
+border-radius: 10px;
+}
+.some .div-card .texts p {
+font-size: 10px;
+}
+.some .div-card .button button {
+padding: 6px; 
+font-size: 12px;
+}
+.tutorial{
+display: flex; 
+justify-content: center; 
+align-items: center; 
+text-align: center;
+flex-direction: column;
+}
+.tutorial .header h1{
+font-size: 2rem;
+}
+.tutorial .sub-title p {
+font-size: 10px;
+}
+.tutorial .siblings {
+  
+  width: 300px;
+}
+}
+
+@media (max-width: 300px){
+p{
+font-size: 12px; 
+}
+h1{
+font-size: 1.6rem; 
+}
+
+.siblings {
+flex-direction: column; 
+gap: 1rem; 
+width: 200px;
+}
+.hero h1{
+font-size: 1rem; 
+}
+.hero p {
+font-size: 10px; 
+}
+
+.some .div-card .texts p {
+font-size: 10px; 
+}
+.some .div-card {
+padding: 10px;
+height: 150px;
+width: 150px;
+border-radius: 10px;
+}
+}
+
+.join {
+padding: 13px;
+}
+.join .biggest-btn {
+display: flex; 
+align-items: center; 
+padding: 12px; 
+}
+.join .biggest-btn button {
+padding: 15px; 
+width: 100%; 
+border: none; 
+outline: none; 
+cursor: pointer; 
+background: var(--secondary-color);
+border-radius: 10px; 
+}
+.join .biggest-btn button a {
+text-decoration: none; 
+color: var(--text-variant);
+}
+#media {
+display: flex; 
+align-items: center; 
+justify-content: center; 
+}
+#media .media-icons {
+  padding: 12px; 
+}
+#media .media-icons ul {
+display: flex; 
+align-items: center; 
+gap: 2rem; 
+list-style: none;
+}
+#media .media-icons ul li {
+font-size: 2rem;
+cursor: pointer; 
+transition: 0.5s ease;
+}
+
+.fa-facebook {
+color: var(--secondary-color);
+}
+.fa-github {
+color: var(--primary-color);
+}
+.fa-youtube {
+color: #FF6363;
+}
+.dark-mode #media .media-icons  ul li .fa-github{
+color: #F8F8F8;
+}
+.footer {
+display: flex; 
+justify-content: center; 
+align-items: center; 
+}
+.footer .footer-content {
+  padding: 20px;
+  gap: 1rem; 
+}
+.footer .footer-content footer p {
+font-size: 1rem; 
+color: var(--primary-color);
+}
+.footer .footer-content .footer-links a {
+  text-decoration: none; 
+  color: var(--secondary-color);
+  
+}
+.dark-mode header.active nav ul li:first-child {
+display: none;
+} /* para sa darkmode */
+
+header.active nav ul li:first-child {
+  display: none;
+} /* Para sa lightmode */
+
+.dark-mode .footer-content footer p {
+  color: var(--text-color);
+}
